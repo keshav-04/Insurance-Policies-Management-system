@@ -1,85 +1,46 @@
-# Insurance-Policies-Management-system
+# Insurance Policy Management System
 
-### Entities:
+## Overview
 
-Policy Holder
+This project is an advanced insurance policy management system developed for a pivotal database course project. The system incorporates dynamic policy validation, automated claims processing, and real-time analytics to streamline operations in the insurance domain.
 
-    PolicyHolderID (PK)
-    FirstName
-    LastName
-    Address
-    PhoneNumber
-    Email
-Policy
+## Key Features
 
-    PolicyID (PK)
-    PolicyNumber
-    PolicyType
-    CoverageAmount
-    PremiumAmount
-    StartDate
-    EndDate
-Insurance Company
+- Dynamic policy validation ensuring accurate and up-to-date policy information.
+- Automated claims processing for efficient and error-free handling of insurance claims.
+- Real-time analytics providing insights for informed decision-making.
 
-    CompanyID (PK)
-    CompanyName
-    Address
-    PhoneNumber
-    Email
-Agent
+## CLI (Command Line Interface)
 
-    AgentID (PK)
-    FirstName
-    LastName
-    Address
-    PhoneNumber
-    Email
-Claim
+In addition to the web-based system, a Python-based Command Line Interface (CLI) has been developed to enhance accessibility and usability.
 
-    ClaimID (PK)
-    PolicyID (FK)
-    DateFiled
-    ClaimAmount
-    Status
-    Description
-Beneficiary
+## Getting Started
 
-    BeneficiaryID (PK)
-    FirstName
-    LastName
-    Relationship
-    Percentage
-Payment
+### Prerequisites
 
-    PaymentID (PK)
-    ClaimID (FK)
-    Amount
-    PaymentDate
-    Method
-Coverage Type
+- Python
+- Database management system [e.g., PostgreSQL]
 
-    CoverageTypeID (PK)
-    CoverageName
-    Description
-Maturity
+### Installation
 
-    MaturityID (PK)
-    PolicyID (FK)
-    MaturityDate
-    MaturityAmount
+1. Clone the repository: `git clone https://github.com/yourusername/insurance-management-system.git`
+2. Navigate to the project directory: `cd insurance-management-system`
+3. Install dependencies: `pip install -r requirements.txt`
 
+## Usage
 
-### Relationships:
+1. Set up the database schema using the provided SQL scripts.
+2. Run the system: `python main.py`
+3. Access the CLI: `python cli.py`
 
-- Policy Holder (1) ----< Owns >---- (1 or many) Policy
-- Policy (1) ----< Issued by >---- (1) Insurance Company
-- Policy (1) ----< Managed by >---- (0 or 1) Agent
-- Policy (1) ----< Has >---- (1) Coverage Type
-- Policy (1) ----< Has >---- (0 or many) Beneficiary
-- Policy (1) ----< Matures >---- (1) Maturity
-- Claim (1) ----< Belongs to >---- (1) Policy
-- Claim (1) ----< Filed by >---- (1) Policy Holder
-- Claim (1) ----< Managed by >---- (0 or 1) Agent
-- Claim (1) ----< Has >---- (0 or many) Payment
-- Beneficiary (1) ----< Receives >---- (0 or many) Payment
-- Agent (0 or 1) ----< Manages >---- (1) Policy Holder
+## Contributing
+
+Contributions are welcome! Please follow our [contribution guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- Mention any collaborators or resources that inspired or helped during the project.
