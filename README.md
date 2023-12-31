@@ -23,15 +23,13 @@ In addition to the web-based system, a Python-based Command Line Interface (CLI)
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/yourusername/insurance-management-system.git`
-2. Navigate to the project directory: `cd insurance-management-system`
-3. Install dependencies: `pip install -r requirements.txt`
+1. Clone the repository: `https://github.com/keshav-04/Insurance-Policy-Management-system.git`
+2. Navigate to the project directory: `cd insurance-policy-management-system`
 
 ## Usage
 
 1. Set up the database schema using the provided SQL scripts.
 2. Run the system: `python main.py`
-3. Access the CLI: `python cli.py`
 
 ## Contributing
 
