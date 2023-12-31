@@ -35,12 +35,4 @@ In addition to the web-based system, a Python-based Command Line Interface (CLI)
 
 ## Contributing
 
-Contributions are welcome! Please follow our [contribution guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-- Mention any collaborators or resources that inspired or helped during the project.
+Contributions are welcome!.
